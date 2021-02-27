@@ -15,7 +15,7 @@ module.exports = {
     },
     {
       type: 'confirm',
-      name: '$DEPENDS_ON:nestjs-typeorm',
+      name: '$DEPENDS_ON:nestjs-typeorm$',
       message: 'Use TypeORM to manage database operations',
       default: false,
     },
