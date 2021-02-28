@@ -8,16 +8,20 @@ module.exports = {
       default: '3000',
     },
     {
-      type: 'confirm',
-      name: '$DEPENDS_ON:nestjs-jwt$',
-      message: 'Use JWT to manage sessions',
-      default: false,
-    },
-    {
-      type: 'confirm',
-      name: '$DEPENDS_ON:nestjs-typeorm$',
-      message: 'Use TypeORM to manage database operations',
-      default: false,
+      type: 'checkbox',
+      name: '$DEPENDS_ON$',
+      message: 'Check the features needed for your project',
+      choices: [
+        {
+          name: 'TypeORM',
+          value: 'nestjs-typeorm',
+        },
+        {
+          name: 'JWT',
+          value: 'nestjs-jwt',
+        },
+      ],
+      default: [],
     },
   ],
 };
